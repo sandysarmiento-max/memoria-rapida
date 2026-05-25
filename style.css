@@ -303,3 +303,8 @@ button {
     width: 100%;
   }
 }
+.btn-delete.confirming {
+  background: #7f1d1d;
+  color: #ffffff;
+  border-color: #7f1d1d;
+}
