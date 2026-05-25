@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoria Rápida · Recordatorios por voz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app-container">
+    <header class="app-header">
+      <p class="eyebrow">Recordatorios rápidos</p>
+      <h1>Memoria Rápida</h1>
+      <p>Dicta una nota, guárdala como texto y encuéntrala por palabra.</p>
+    </header>
+
+    <section class="recording-section" aria-labelledby="recordTitle">
+      <div class="audio-card">
+        <h2 id="recordTitle" class="section-title">Nueva nota</h2>
+        <button type="button" id="recordBtn" class="btn-record">
+          <span class="icon" aria-hidden="true">🎙️</span>
+          <span id="recordText">Toca para dictar</span>
+        </button>
+        <div id="statusIndicator" class="status-text">Listo para escuchar</div>
+      </div>
+    </section>
+
+    <section class="manual-section" aria-labelledby="manualTitle">
+      <h2 id="manualTitle" class="section-title">También puedes escribirla</h2>
+      <div class="manual-box">
+        <textarea id="manualNote" rows="3" placeholder="Ej. Dejé el anillo dorado en el cajón verde..."></textarea>
+        <button type="button" id="saveManualBtn" class="btn-secondary">Guardar nota</button>
+      </div>
+    </section>
+
+    <section class="search-section" aria-label="Buscar notas guardadas">
+      <div class="search-bar">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Buscar: anillo, cajón, papel, verde..."
+          autocomplete="off"
+        >
+      </div>
+    </section>
+
+    <section class="notes-section" aria-labelledby="notesTitle">
+      <div class="notes-header">
+        <h2 id="notesTitle">Notas guardadas</h2>
+        <span id="notesCount" class="notes-count">0 notas</span>
+      </div>
+
+      <div id="notesContainer" class="notes-container"></div>
+
+      <div id="emptyState" class="empty-state">
+        Todavía no tienes notas guardadas.
+      </div>
+
+      <div id="noResults" class="no-results fp-hidden">
+        No se encontraron notas con esa palabra.
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
