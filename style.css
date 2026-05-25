@@ -6,16 +6,16 @@
 
 :root {
   color-scheme: light;
-  --bg: #fcf9f5;
+  --bg: #f3fbfa;
   --panel: #ffffff;
-  --text: #3d3a38;
-  --muted: #8d8580;
-  --line: #eee7e1;
-  --soft: #fff5f2;
-  --soft-line: #ffe0d8;
-  --accent: #ef745f;
-  --accent-dark: #cf4f3d;
-  --lilac: #f3effa;
+  --text: #263b3c;
+  --muted: #6f8586;
+  --line: #dceeee;
+  --soft: #e9f8f7;
+  --soft-line: #c7e9e7;
+  --accent: #2aa7a3;
+  --accent-dark: #187b78;
+  --lilac: #eef7f7;
   --danger: #b84a3b;
 }
 
