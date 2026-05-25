@@ -66,13 +66,25 @@ notesContainer.addEventListener('click', (event) => {
   const note = savedNotes.find(item => item.id === noteId);
   if (!note) return;
 
-  const shouldDelete = confirm('¿Borrar esta nota?');
-  if (!shouldDelete) return;
+  if (deleteBtn.dataset.confirming !== 'true') {
+  deleteBtn.dataset.confirming = 'true';
+  deleteBtn.textContent = 'Confirmar';
+  deleteBtn.classList.add('confirming');
+  statusIndicator.textContent = 'Toca Confirmar para borrar la nota.';
 
-  savedNotes = savedNotes.filter(item => item.id !== noteId);
-  persistNotes();
-  renderAllNotes();
-  statusIndicator.textContent = 'Nota borrada.';
+  setTimeout(() => {
+    deleteBtn.dataset.confirming = 'false';
+    deleteBtn.textContent = 'Borrar';
+    deleteBtn.classList.remove('confirming');
+  }, 3000);
+
+  return;
+}
+
+savedNotes = savedNotes.filter(item => item.id !== noteId);
+persistNotes();
+renderAllNotes();
+statusIndicator.textContent = 'Nota borrada.';
 });
 
 function setupSpeechRecognition() {
