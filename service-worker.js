@@ -1,14 +1,14 @@
-const CACHE_NAME = 'vozmemo-v1';
+const CACHE_NAME = 'vozmemo-v2';
 
 const FILES_TO_CACHE = [
   './',
   './index.html',
   './style.css?v=2',
   './app.js?v=2',
-  './manifest.webmanifest?v=1',
-  './icon-192.png',
-  './icon-512.png',
-  './apple-touch-icon.png'
+  './manifest.webmanifest?v=2',
+  './icon-192-v2.png',
+  './icon-512-v2.png',
+  './apple-touch-icon-v2.png'
 ];
 
 self.addEventListener('install', event => {
